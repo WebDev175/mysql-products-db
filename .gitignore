@@ -1,0 +1,24 @@
+# IDE/editor files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Eta cache (if used)
+.eta/
+
+# OS files (macOS / Windows)
+.DS_Store
+.DS_Store?
+Thumbs.db
+.AppleDouble
+.LSOverride
+.Trashes
+.Spotlight-V100/
+.fseventsd/
+.apdisk
+*.icloud
+Icon?
+._*
