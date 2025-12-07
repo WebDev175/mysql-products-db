@@ -24,7 +24,7 @@ CREATE TABLE brand_addresses (
     state VARCHAR(100),
     city VARCHAR(100),
     street VARCHAR(255),
-    address_type ENUM ('HQ', 'Office', 'Warehouse', 'Billing', 'Other') NOT NULL DEFAULT 'HQ',
+    address_type ENUM ('HQ', 'Office', 'Warehouse', 'Other') NOT NULL DEFAULT 'HQ',
     FOREIGN KEY (brand_id) REFERENCES brands (id) ON DELETE CASCADE,
     FOREIGN KEY (country_id) REFERENCES countries (id) ON DELETE RESTRICT
 );
