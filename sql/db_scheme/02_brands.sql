@@ -1,14 +1,4 @@
-DROP DATABASE IF EXISTS products_db;
-
-CREATE DATABASE IF NOT EXISTS products_db;
-
 USE products_db;
-
-CREATE TABLE countries (
-    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    iso_code CHAR(3) NOT NULL UNIQUE,
-    name VARCHAR(100) NOT NULL UNIQUE
-);
 
 CREATE TABLE brands (
     id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -32,7 +22,7 @@ CREATE TABLE brand_addresses (
 CREATE TABLE brand_details (
     brand_id BIGINT UNSIGNED PRIMARY KEY,
     website_url VARCHAR(500),
-    founded_at DATETIME(6),
+    founded_at DATE NULL,
     description TEXT,
     stock_symbol VARCHAR(20),
     CONSTRAINT fk_brand_details_brands FOREIGN KEY (brand_id) REFERENCES brands(id) ON DELETE CASCADE

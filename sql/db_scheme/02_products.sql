@@ -1,1 +1,0 @@
-USE products_db;
